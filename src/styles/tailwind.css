@@ -1,0 +1,108 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Primary Colors */
+    --primary-background: #ff6600;
+    --primary-foreground: #ffffff;
+    --primary-light: #ff660019;
+    --primary-dark: #ef5b00;
+
+    /* Secondary Colors */
+    --secondary-background: #070910;
+    --secondary-foreground: #fafafa;
+    --secondary-light: #07091089;
+    --secondary-dark: #070910a7;
+
+    /* Text Colors */
+    --text-primary: #ffffff;
+    --text-secondary: #fafafa;
+    --text-muted: #dddee1;
+    --text-accent: #ff6600;
+    --text-light: #d1d5db;
+    --text-dark: #f9f9f9;
+
+    /* Background Colors */
+    --bg-main: #070910;
+    --bg-card: #ffffff07;
+    --bg-overlay: #dddee10a;
+    --bg-accent: #ff660019;
+    --bg-neutral: #7c7c7c;
+    --bg-light: #fafafa1e;
+
+    /* Border Colors */
+    --border-primary: #ffffff0f;
+    --border-secondary: #fafafa;
+
+    /* Typography Variables */
+    --font-size-xs: 13px;
+    --font-size-sm: 14px;
+    --font-size-base: 16px;
+    --font-size-lg: 20px;
+    --font-size-xl: 24px;
+    --font-size-2xl: 32px;
+    --font-size-3xl: 48px;
+    --font-size-4xl: 64px;
+
+    /* Font Weight Variables */
+    --font-weight-normal: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+
+    /* Line Height Variables */
+    --line-height-xs: 16px;
+    --line-height-sm: 17px;
+    --line-height-base: 18px;
+    --line-height-lg: 20px;
+    --line-height-xl: 25px;
+    --line-height-2xl: 30px;
+    --line-height-3xl: 36px;
+    --line-height-4xl: 72px;
+    --line-height-5xl: 85px;
+
+    /* Spacing Variables */
+    --spacing-xs: 4px;
+    --spacing-sm: 8px;
+    --spacing-md: 12px;
+    --spacing-lg: 16px;
+    --spacing-xl: 24px;
+    --spacing-2xl: 32px;
+    --spacing-3xl: 42px;
+    --spacing-4xl: 52px;
+    --spacing-5xl: 64px;
+
+    /* Border Radius Variables */
+    --radius-xs: 3px;
+    --radius-sm: 4px;
+    --radius-md: 8px;
+    --radius-lg: 12px;
+    --radius-xl: 16px;
+    --radius-2xl: 24px;
+    --radius-3xl: 32px;
+    --radius-full: 326px;
+
+    /* Component-specific Colors */
+    --header-bg: var(--bg-main);
+    --header-text: var(--text-primary);
+    
+    --button-bg-primary: var(--primary-background);
+    --button-bg-secondary: var(--bg-accent);
+    --button-bg-outline: var(--secondary-light);
+    --button-text-primary: var(--text-primary);
+    --button-text-accent: var(--text-accent);
+    
+    --link-text-primary: var(--text-primary);
+    --link-text-secondary: var(--text-muted);
+    --link-text-accent: var(--text-accent);
+    
+    --footer-bg: var(--bg-overlay);
+    --footer-text: var(--text-secondary);
+    
+    --input-bg: var(--bg-card);
+    --input-border: var(--border-primary);
+    --input-text: var(--text-primary);
+  }
+}
