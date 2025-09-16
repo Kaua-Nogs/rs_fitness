@@ -5,6 +5,21 @@ import Section from '../../components/ui/Section';
 import theme from '../../theme';
 
 const HeroSection = () => {
+  // Função auxiliar para rolagem suave até elementos
+  const scrollToSection = (elementId) => {
+    const element = document.getElementById(elementId);
+    if (element) {
+      // Offset para ajustar a posição de rolagem (para levar em conta o header fixo)
+      const headerOffset = 96; // Considera a altura do header
+      const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
+      const offsetPosition = elementPosition - headerOffset;
+      
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+    }
+  };
   return (
     <Section
       backgroundImage="/images/img_section_2.png"
@@ -54,7 +69,7 @@ const HeroSection = () => {
               text="Peça seu orçamento"
               variant="primary"
               size="medium"
-              onClick={() => {}}
+              onClick={() => scrollToSection('cta')}
               className="w-full sm:w-auto text-base font-medium"
               text_font_size="16"
               text_font_family="Archivo"
@@ -68,7 +83,7 @@ const HeroSection = () => {
               text="Conheça nossos serviços"
               variant="secondary"
               size="medium"
-              onClick={() => {}}
+              onClick={() => scrollToSection('services')}
               className="w-full sm:w-auto text-base font-medium"
               text_font_size="16"
               text_font_family="Archivo"
