@@ -2,6 +2,10 @@ module.exports = {
   content: ["./src/**/*.{js,ts,jsx,tsx,html,mdx}"],
   darkMode: "class",
   theme: {
+    fontFamily: {
+      sans: ['Oswald', 'sans-serif'],
+      serif: ['serif'],
+    },
     screens: {
       sm: '640px',   
       md: '768px',    

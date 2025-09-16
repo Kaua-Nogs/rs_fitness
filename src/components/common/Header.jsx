@@ -8,12 +8,13 @@ const Header = () => {
 
   return (
     <header className="w-full">
-      {/* Top Header Bar */}
+      {/* Top Header Bar
+      
       <div className="w-full bg-[#070910] shadow-[0px_4px_100px_#888888ff]">
         <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-center items-center py-1">
             <div className="hidden lg:flex justify-between items-center w-[60%]">
-              {/* Contact Info Left */}
+          
               <div className="flex gap-2 justify-center items-center">
                 <img 
                   src="/images/img_call.svg" 
@@ -25,7 +26,6 @@ const Header = () => {
                 </span>
               </div>
               
-              {/* Email Right */}
               <div className="flex gap-2 justify-center items-center">
                 <img 
                   src="/images/img_mail.svg" 
@@ -38,7 +38,6 @@ const Header = () => {
               </div>
             </div>
             
-            {/* Social Icons */}
             <div className="flex gap-6 justify-center items-center ml-auto">
               <Link href="#" className="block">
                 <img 
@@ -58,6 +57,9 @@ const Header = () => {
           </div>
         </div>
       </div>
+
+      */}
+      
 
       {/* Main Navigation */}
       <div className="w-full bg-[#070910] shadow-[0px_4px_100px_#888888ff]">

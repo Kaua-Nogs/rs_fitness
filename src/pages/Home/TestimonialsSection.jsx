@@ -1,5 +1,6 @@
 import React from 'react';
 import Line from '../../components/ui/Line';
+import Section from '@/components/ui/Section';
 
 const TestimonialsSection = () => {
   const testimonials = [
@@ -27,61 +28,65 @@ const TestimonialsSection = () => {
   ];
 
   return (
-    <section 
-      className="w-full py-16 sm:py-20 md:py-24 lg:py-32"
-      style={{
-        backgroundImage: "url('/images/img_0x0.png')",
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat'
-      }}
-    >
-      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-14">
+    <Section
+          backgroundImage="/images/img_0x0.png"
+          backgroundOverlay="linear-gradient(to top, rgba(0,0,0,0.4), rgba(0,0,0,0.6))"
+          paddingY="lg"
+          containerWidth="xl"
+          id="services"
+        >
+      <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col justify-center items-center w-full">
           
           {/* Header */}
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[48px] font-bold text-white font-['Oswald'] leading-tight sm:leading-[1.2] md:leading-[1.3] lg:leading-[72px] text-center capitalize">
-            <span className="text-white">O que </span>
-            <span className="text-[#ff6600]">nossos clientes dizem</span>
-          </h2>
-          
-          {/* Orange Line */}
-          <Line 
-            className="w-[60px] sm:w-[70px] md:w-[80px] lg:w-[80px] h-1 bg-[#ff6600] mt-2"
-            width="80px"
-            height="4px"
-            style={{ backgroundColor: '#ff6600', marginTop: '8px' }}
-          />
+          <div className="flex flex-col items-center justify-center">
+            <span className="text-base sm:text-lg font-bold text-[#ff6600] font-['Oswald'] leading-7 text-center bg-[#ff660019] rounded-2xl px-3 py-1.5 mb-4">
+              DEPOIMENTOS
+            </span>
+            
+            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-white font-['Oswald'] leading-tight text-center capitalize">
+              <span className="text-white">O que </span>
+              <span className="text-[#ff6600]">nossos clientes dizem</span>
+            </h2>
+            
+            {/* Orange Line */}
+            <Line 
+              className="w-[50px] h-0.5 bg-[#ff6600] mt-4"
+              width="50px"
+              height="2px"
+              style={{ backgroundColor: '#ff6600' }}
+            />
+          </div>
 
           {/* Testimonials Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 w-full max-w-[952px] mt-10 sm:mt-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 w-full max-w-[900px] mt-8">
             {testimonials?.map((testimonial) => (
               <div 
                 key={testimonial?.id}
-                className="flex flex-col gap-5 sm:gap-6 justify-start items-start w-full bg-[#070910a7] rounded-xl p-6 sm:p-7 md:p-8 lg:p-[52px_22px] shadow-[0px_10px_15px_#00000019] hover:shadow-[0px_15px_25px_#00000025] transition-shadow duration-300"
+                className="flex flex-col gap-4 justify-start items-start w-full bg-[#070910a7] rounded-lg p-4 sm:p-5 shadow-[0px_10px_15px_#00000019] hover:shadow-[0px_15px_25px_#00000025] transition-shadow duration-300"
               >
                 <img 
                   src="/images/img_frame_orange_a700_32x32.svg" 
                   alt="Quote" 
-                  className="w-8 h-8"
+                  className="w-6 h-6"
                 />
                 
-                <p className="text-sm sm:text-base lg:text-base font-normal text-[#d1d5db] font-['Archivo'] leading-5 sm:leading-6 lg:leading-[21px] text-left w-full">
+                <p className="text-sm font-normal text-[#d1d5db] font-['Archivo'] leading-5 text-left w-full">
                   {testimonial?.quote}
                 </p>
                 
-                <div className="flex flex-col gap-6 justify-start items-center w-full">
+                <div className="flex flex-col gap-4 justify-start items-center w-full">
                   <div className="flex gap-3 justify-start items-center w-full">
                     <img 
                       src={testimonial?.avatar} 
                       alt={testimonial?.name}
-                      className="w-12 h-12 rounded-3xl object-cover"
+                      className="w-10 h-10 rounded-2xl object-cover"
                     />
                     <div className="flex flex-col justify-center items-start flex-1">
-                      <span className="text-lg sm:text-xl lg:text-xl font-bold text-white font-['Oswald'] leading-7 sm:leading-8 lg:leading-[30px] text-left">
+                      <span className="text-base sm:text-lg font-bold text-white font-['Oswald'] leading-6 text-left">
                         {testimonial?.name}
                       </span>
-                      <span className="text-sm lg:text-sm font-normal text-[#dddee1] font-['Archivo'] leading-4 lg:leading-4 text-left">
+                      <span className="text-xs font-normal text-[#dddee1] font-['Archivo'] leading-4 text-left">
                         {testimonial?.role}
                       </span>
                     </div>
@@ -90,7 +95,7 @@ const TestimonialsSection = () => {
                   <img 
                     src="/images/img_container.svg" 
                     alt="Rating" 
-                    className="w-full h-4"
+                    className="w-full h-3"
                   />
                 </div>
               </div>
@@ -98,7 +103,7 @@ const TestimonialsSection = () => {
           </div>
         </div>
       </div>
-    </section>
+    </Section>
   );
 };
 
