@@ -28,7 +28,7 @@ const ProductsSection = () => {
   ];
 
   return (
-    <section className="w-full py-12 sm:py-16 md:py-20 lg:py-24 relative">
+    <section id="products" className="w-full py-12 sm:py-16 md:py-20 lg:py-24 relative">
       {/* Background Circle */}
       <div className="absolute top-0 left-0 w-[300px] sm:w-[400px] md:w-[500px] lg:w-[600px] h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] bg-[#fafafa1e] rounded-full opacity-20"></div>
       <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">

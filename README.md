@@ -87,11 +87,42 @@ This project uses Tailwind CSS for styling. The configuration includes:
 
 ## 📦 Deployment
 
+### Build Localmente
+
 Build the application for production:
 
 ```bash
 npm run build
 ```
+
+### Deploy na Vercel
+
+Para fazer deploy do seu projeto na Vercel:
+
+1. Crie uma conta na [Vercel](https://vercel.com) se ainda não tiver uma.
+
+2. Instale a CLI da Vercel (opcional, mas útil):
+```bash
+npm install -g vercel
+```
+
+3. Faça login na Vercel via CLI:
+```bash
+vercel login
+```
+
+4. No diretório raiz do projeto, execute:
+```bash
+vercel
+```
+
+5. Ou através da interface web:
+   - Faça push do seu código para um repositório GitHub
+   - Acesse [Vercel](https://vercel.com/new)
+   - Importe seu repositório GitHub
+   - A Vercel detectará automaticamente as configurações do Vite e fará o deploy
+
+6. Depois do primeiro deploy, a cada push para a branch principal, a Vercel fará um novo deploy automaticamente.
 
 ## 🙏 Acknowledgments
 

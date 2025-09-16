@@ -3,6 +3,21 @@ import Link from '../ui/Link';
 import IconButton from '../ui/IconButton';
 
 const Footer = () => {
+  // Função auxiliar para rolagem suave até elementos
+  const scrollToSection = (elementId) => {
+    const element = document.getElementById(elementId);
+    if (element) {
+      // Offset para ajustar a posição de rolagem (para levar em conta o header fixo)
+      const headerOffset = 96; // Considera a altura do header
+      const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
+      const offsetPosition = elementPosition - headerOffset;
+      
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+    }
+  };
   return (
     <footer className="w-full bg-[#dddee10a] py-10 lg:py-16">
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
@@ -54,11 +69,14 @@ const Footer = () => {
                   <li className="flex items-center gap-3">
                     <span className="text-[13px] font-normal text-[#ff6600] font-['Inter']">›</span>
                     <Link 
-                      href="#sobre" 
+                      href="#about" 
                       className="text-sm font-normal text-[#dddee1] font-['Archivo'] hover:text-white transition-colors"
                       variant="default"
                       size="md"
-                      onClick={() => {}}
+                      onClick={(e) => {
+                        e.preventDefault();
+                        scrollToSection('about');
+                      }}
                       target="_self"
                       rel="nofollow"
                     >
@@ -68,11 +86,14 @@ const Footer = () => {
                   <li className="flex items-center gap-3">
                     <span className="text-[13px] font-normal text-[#ff6600] font-['Inter']">›</span>
                     <Link 
-                      href="#servicos" 
+                      href="#services" 
                       className="text-sm font-normal text-[#dddee1] font-['Archivo'] hover:text-white transition-colors"
                       variant="default"
                       size="md"
-                      onClick={() => {}}
+                      onClick={(e) => {
+                        e.preventDefault();
+                        scrollToSection('services');
+                      }}
                       target="_self"
                       rel="nofollow"
                     >
@@ -82,11 +103,14 @@ const Footer = () => {
                   <li className="flex items-center gap-3">
                     <span className="text-[13px] font-normal text-[#ff6600] font-['Inter']">›</span>
                     <Link 
-                      href="#produtos" 
+                      href="#products" 
                       className="text-sm font-normal text-[#dddee1] font-['Archivo'] hover:text-white transition-colors"
                       variant="default"
                       size="md"
-                      onClick={() => {}}
+                      onClick={(e) => {
+                        e.preventDefault();
+                        scrollToSection('products');
+                      }}
                       target="_self"
                       rel="nofollow"
                     >
@@ -96,11 +120,14 @@ const Footer = () => {
                   <li className="flex items-center gap-3">
                     <span className="text-[13px] font-normal text-[#ff6600] font-['Inter']">›</span>
                     <Link 
-                      href="#contato" 
+                      href="#cta" 
                       className="text-sm font-normal text-[#dddee1] font-['Archivo'] hover:text-white transition-colors"
                       variant="default"
                       size="md"
-                      onClick={() => {}}
+                      onClick={(e) => {
+                        e.preventDefault();
+                        scrollToSection('cta');
+                      }}
                       target="_self"
                       rel="nofollow"
                     >
@@ -118,33 +145,78 @@ const Footer = () => {
                 <ul className="space-y-4">
                   <li className="flex items-center gap-3">
                     <span className="text-[13px] font-normal text-[#ff6600] font-['Inter']">›</span>
-                    <span className="text-sm font-normal text-[#dddee1] font-['Archivo']">
+                    <Link 
+                      href="#services" 
+                      className="text-sm font-normal text-[#dddee1] font-['Archivo'] hover:text-white transition-colors"
+                      variant="default"
+                      size="md"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        scrollToSection('services');
+                      }}
+                    >
                       Fabricação sob demanda
-                    </span>
+                    </Link>
                   </li>
                   <li className="flex items-center gap-3">
                     <span className="text-[13px] font-normal text-[#ff6600] font-['Inter']">›</span>
-                    <span className="text-sm font-normal text-[#dddee1] font-['Archivo']">
+                    <Link 
+                      href="#services" 
+                      className="text-sm font-normal text-[#dddee1] font-['Archivo'] hover:text-white transition-colors"
+                      variant="default"
+                      size="md"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        scrollToSection('services');
+                      }}
+                    >
                       Manutenção
-                    </span>
+                    </Link>
                   </li>
                   <li className="flex items-center gap-3">
                     <span className="text-[13px] font-normal text-[#ff6600] font-['Inter']">›</span>
-                    <span className="text-sm font-normal text-[#dddee1] font-['Archivo']">
+                    <Link 
+                      href="#services" 
+                      className="text-sm font-normal text-[#dddee1] font-['Archivo'] hover:text-white transition-colors"
+                      variant="default"
+                      size="md"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        scrollToSection('services');
+                      }}
+                    >
                       Reparo técnico
-                    </span>
+                    </Link>
                   </li>
                   <li className="flex items-center gap-3">
                     <span className="text-[13px] font-normal text-[#ff6600] font-['Inter']">›</span>
-                    <span className="text-sm font-normal text-[#dddee1] font-['Archivo']">
+                    <Link 
+                      href="#services" 
+                      className="text-sm font-normal text-[#dddee1] font-['Archivo'] hover:text-white transition-colors"
+                      variant="default"
+                      size="md"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        scrollToSection('services');
+                      }}
+                    >
                       Consultoria
-                    </span>
+                    </Link>
                   </li>
                   <li className="flex items-center gap-3">
                     <span className="text-[13px] font-normal text-[#ff6600] font-['Inter']">›</span>
-                    <span className="text-sm font-normal text-[#dddee1] font-['Archivo']">
+                    <Link 
+                      href="#services" 
+                      className="text-sm font-normal text-[#dddee1] font-['Archivo'] hover:text-white transition-colors"
+                      variant="default"
+                      size="md"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        scrollToSection('services');
+                      }}
+                    >
                       Gestão de academias
-                    </span>
+                    </Link>
                   </li>
                 </ul>
               </div>

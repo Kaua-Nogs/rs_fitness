@@ -33,7 +33,7 @@ const TestimonialsSection = () => {
           backgroundOverlay="linear-gradient(to top, rgba(0,0,0,0.4), rgba(0,0,0,0.6))"
           paddingY="lg"
           containerWidth="xl"
-          id="services"
+          id="testimonials"
         >
       <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col justify-center items-center w-full">

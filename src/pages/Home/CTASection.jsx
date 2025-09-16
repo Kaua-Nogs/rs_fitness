@@ -3,7 +3,7 @@ import Button from '../../components/ui/Button';
 
 const CTASection = () => {
   return (
-    <section className="w-full py-12 sm:py-16 md:py-20 lg:py-24 relative">
+    <section id="cta" className="w-full py-12 sm:py-16 md:py-20 lg:py-24 relative">
       {/* Background Images */}
       <img 
         src="/images/img_vector.png" 

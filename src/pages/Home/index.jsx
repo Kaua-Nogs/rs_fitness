@@ -25,7 +25,7 @@ const Home = () => {
       <div className="w-full bg-[#070910] min-h-screen">
         <Header />
         
-        <main>
+        <main className="pt-28">
           <HeroSection />
           <AboutSection />
           <ServicesSection />
