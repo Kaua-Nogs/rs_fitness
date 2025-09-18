@@ -1,29 +1,18 @@
 import React, { useState, useEffect } from 'react';
 import Button from '../ui/Button';
 import Link from '../ui/Link';
-
+import { scrollToSection as scrollToSectionUtil } from '../../utils/navigation';
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('');
   
-  // Função auxiliar para rolagem suave até elementos
+  // Wrapper para a função de rolagem que também atualiza a seção ativa
   const scrollToSection = (elementId) => {
-    const element = document.getElementById(elementId);
-    if (element) {
-      // Offset para ajustar a posição de rolagem (para levar em conta o header fixo)
-      const headerOffset = 96; // Aumentado para considerar a barra de contato
-      const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
-      const offsetPosition = elementPosition - headerOffset;
-      
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: 'smooth'
-      });
-      
-      // Atualiza a seção ativa
-      setActiveSection(elementId);
-    }
+    scrollToSectionUtil(elementId);
+    
+    // Atualiza a seção ativa
+    setActiveSection(elementId);
   };
   
   // Função para detectar qual seção está visível

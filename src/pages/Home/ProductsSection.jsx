@@ -1,6 +1,8 @@
 import React from 'react';
 import Line from '../../components/ui/Line';
 import Typography from '@/components/ui/Typography';
+import Button from '../../components/ui/Button';
+import { scrollToSection } from '../../utils/navigation';
 
 const ProductsSection = () => {
   const products = [
@@ -99,6 +101,28 @@ const ProductsSection = () => {
                 </div>
               </div>
             ))}
+          </div>
+          
+          {/* CTA Button */}
+          <div className="w-full flex justify-center mt-8">
+            <Button
+              text="Peça seu orçamento"
+              text_font_size="16"
+              text_font_family="Archivo"
+              text_font_weight="500"
+              text_line_height="20px"
+              text_color="#ffffff"
+              fill_background_color="#ef5b00"
+              border_border_radius="4px"
+              border_border="none"
+              layout_width="auto"
+              position="relative"
+              padding="10px 20px"
+              className="text-base"
+              variant="primary"
+              size="medium"
+              onClick={() => scrollToSection('cta')}
+            />
           </div>
         </div>
       </div>

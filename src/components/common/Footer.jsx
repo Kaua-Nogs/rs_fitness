@@ -1,23 +1,9 @@
 import React from 'react';
 import Link from '../ui/Link';
 import IconButton from '../ui/IconButton';
+import { scrollToSection } from '../../utils/navigation';
 
 const Footer = () => {
-  // Função auxiliar para rolagem suave até elementos
-  const scrollToSection = (elementId) => {
-    const element = document.getElementById(elementId);
-    if (element) {
-      // Offset para ajustar a posição de rolagem (para levar em conta o header fixo)
-      const headerOffset = 96; // Considera a altura do header
-      const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
-      const offsetPosition = elementPosition - headerOffset;
-      
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: 'smooth'
-      });
-    }
-  };
   return (
     <footer className="w-full bg-[#dddee10a] py-10 lg:py-16">
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">

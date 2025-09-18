@@ -3,6 +3,7 @@ import Button from '../../components/ui/Button';
 import IconButton from '../../components/ui/IconButton';
 import Line from '../../components/ui/Line';
 import Section from '@/components/ui/Section';
+import { scrollToSection } from '../../utils/navigation';
 
 const ServicesSection = () => {
   const services = [
@@ -117,7 +118,7 @@ const ServicesSection = () => {
             className="text-base mt-2"
             variant="primary"
             size="medium"
-            onClick={() => {}}
+            onClick={() => scrollToSection('cta')}
           />
         </div>
       </div>

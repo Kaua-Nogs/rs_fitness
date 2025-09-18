@@ -1,5 +1,6 @@
 import React from 'react';
 import Button from '../../components/ui/Button';
+import { scrollToSection } from '../../utils/navigation';
 
 const CTASection = () => {
   return (
@@ -50,7 +51,7 @@ const CTASection = () => {
             </p>
           </div>
 
-          {/* CTA Button */}
+          {/* CTA Button - Ao estar já na seção CTA, este botão poderia abrir um modal ou formulário */}
           <Button
             text="Peça seu orçamento"
             text_font_size="16"
@@ -67,7 +68,11 @@ const CTASection = () => {
             size="medium"
             padding="10px 20px"
             className="text-base mt-4"
-            onClick={() => {}}
+            onClick={() => {
+              // Como já estamos na seção CTA, poderíamos abrir um modal ou formulário
+              // Por enquanto, apenas mantém a rolagem para a própria seção
+              scrollToSection('cta');
+            }}
           />
         </div>
       </div>
