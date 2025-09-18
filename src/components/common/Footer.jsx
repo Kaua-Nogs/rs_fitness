@@ -233,7 +233,7 @@ const Footer = () => {
                     onClick={() => {}}
                   />
                   <span className="text-sm font-normal text-[#dddee1] font-['Archivo']">
-                    (98) 9999-9999
+                    (98)9899246-5342
                   </span>
                 </Link>
                 

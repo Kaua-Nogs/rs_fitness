@@ -13,7 +13,7 @@ const Home = () => {
   return (
     <>
       <Helmet>
-        <title>A2 Fitness - Equipamentos Personalizados para Academias | Fabricação & Manutenção</title>
+        <title>RS Fitness - Equipamentos Personalizados para Academias | Fabricação & Manutenção</title>
         <meta 
           name="description" 
           content="Especialistas em equipamentos fitness personalizados para academias. Fabricação sob medida, manutenção especializada e consultoria completa. Transforme sua academia com A2 Fitness - qualidade e excelência garantidas." 
