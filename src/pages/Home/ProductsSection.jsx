@@ -15,17 +15,17 @@ const ProductsSection = () => {
     },
     {
       id: 2,
-      image: "/images/img_pexels_ivan_samkov_4162444.png",
-      category: "COSTAS",
+      image: "/images/img2.jpg",
+      category: "PERNAS",
       subcategory: "MUSCULAÇÃO",
-      title: "Remada Articulada"
+      title: "Cadeira Extensora e Flexora"
     },
     {
       id: 3,
-      image: "/images/img_pexels_cottonbr.png",
-      category: "GLÚTEOS",
+      image: "/images/img3.jpg",
+      category: "PERNAS",
       subcategory: "MUSCULAÇÃO",
-      title: "Agachamento Squad"
+      title: "leg Press 45°"
     }
   ];
 

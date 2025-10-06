@@ -57,7 +57,7 @@ const AboutSection = () => {
         {/* Right Image */}
         <div className="w-full lg:w-2/5 flex justify-center lg:justify-end mt-6 lg:mt-0">
           <img
-            src="/images/img_pexels_ivan_samkov_4162444.png"
+            src="/images/img1.jpg"
             alt="Homem treinando em aparelho de academia"
             className="rounded-lg w-full max-w-[400px] h-auto object-cover"
           />
